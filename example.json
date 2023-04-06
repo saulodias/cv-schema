@@ -1,0 +1,174 @@
+{
+  "$schema": "cv-schema.json",
+  "imageLink": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/John_Doe%2C_born_John_Nommensen_Duchac.jpg/174px-John_Doe%2C_born_John_Nommensen_Duchac.jpg",
+  "name": "John Doe",
+  "title": "Full-Stack Web Developer",
+  "languageCode": "en-US",
+  "address": {
+    "city": "",
+    "country": ""
+  },
+  "contact": {
+    "email": "johndoe@example.com",
+    "websites": [
+      {
+        "url": "https://johndoe.com",
+        "type": "Personal"
+      },
+      {
+        "url": "https://github.com/johndoe",
+        "type": "Portfolio"
+      }
+    ],
+    "phone": "+1-555-555-5555",
+    "address": {
+      "country": "USA",
+      "city": "Anytown",
+      "addressLine1": "123 Main St"
+    }
+  },
+  "education": [
+    {
+      "institution": "University of Anytown",
+      "degree": "Bachelor of Science",
+      "fieldOfStudy": "Computer Science",
+      "startDate": "2014-09-01sss",
+      "endDate": "2018-05-01",
+      "description": "Studied computer science and mathematics, with a focus on software development and algorithms.",
+      "honors": "Dean's List, Honor Society",
+      "score": {
+        "value": 3.9,
+        "unit": "GPA"
+      }
+    },
+    {
+      "institution": "Anytown High School",
+      "degree": "High School Diploma",
+      "fieldOfStudy": "",
+      "startDate": "2010-09-01",
+      "endDate": "2014-05-01",
+      "description": "Completed a rigorous high school program with a focus on math and science.",
+      "honors": "National Honor Society",
+      "score": {
+        "value": 4.0,
+        "unit": "GPA"
+      }
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "proficiency": "Native"
+    },
+    {
+      "language": "Spanish",
+      "proficiency": "Intermediate"
+    }
+  ],
+  "skills": [
+    {
+      "skill": "JavaScript",
+      "level": "Expert"
+    },
+    {
+      "skill": "React",
+      "level": "Advanced"
+    },
+    {
+      "skill": "Node.js",
+      "level": "Advanced"
+    },
+    {
+      "skill": "Python",
+      "level": "Intermediate"
+    }
+  ],
+  "experience": [
+    {
+      "name": "Acme Corporation",
+      "description": "Global provider of innovative products and services.",
+      "website": "https://acme.com",
+      "startDate": "2018-06-01",
+      "endDate": null,
+      "positions": [
+        {
+          "title": "Full-Stack Web Developer",
+          "type": "Full-time",
+          "location": "Anytown USA",
+          "duration": "3 years",
+          "startDate": "2018-06-01",
+          "endDate": null,
+          "description": "Developed and maintained web applications using React, Node.js, and other technologies. Collaborated with cross-functional teams to design and implement new features and improve existing ones.",
+          "locationType": "On-site",
+          "skills": ["React", "Node.js", "JavaScript", "HTML", "CSS"]
+        },
+        {
+          "title": "Software Engineer Intern",
+          "type": "Internship",
+          "location": "Anytown USA",
+          "duration": "3 months",
+          "startDate": "2017-06-02",
+          "endDate": "2017-08-31",
+          "description": "Assisted with the development of a new web application using React and Node.js. Worked with senior engineers to write code, debug issues, and deploy to production.",
+          "locationType": "On-site",
+          "skills": ["React", "Node.js", "JavaScript", "HTML", "CSS"]
+        }
+      ]
+    },
+    {
+      "name": "Beta Industries",
+      "description": "Specializes in software and hardware solutions for the manufacturing industry.",
+      "website": "https://betaindustries.com",
+      "startDate": "2017-01-01",
+      "endDate": "2018-05-01",
+      "positions": [
+        {
+          "title": "Software Engineer",
+          "type": "Full-time",
+          "location": "Anytown USA",
+          "duration": "1 year 5 months",
+          "startDate": "2017-01-01",
+          "endDate": "2018-05-01",
+          "description": "Developed and maintained web applications and back-end services using Python, Django, and other technologies. Worked with a team to design and implement new features and fix bugs.",
+          "locationType": "On-site",
+          "skills": ["Python", "Django", "JavaScript", "HTML", "CSS"]
+        }
+      ]
+    }
+  ],
+  "about": "I am a Full-Stack Web Developer with 3+ years of experience designing and developing web applications. I specialize in JavaScript, React, Node.js, and Python, and I am passionate about creating intuitive and user-friendly interfaces. My goal is to continue learning and growing as a developer while contributing to innovative projects and making a positive impact in the tech industry.",
+  "certifications": [
+    {
+      "name": "Certified React Developer",
+      "organization": "React Training",
+      "dateObtained": "2021-01-01",
+      "expirationDate": null,
+      "id": "123456",
+      "url": "https://reacttraining.com/certification"
+    },
+    {
+      "name": "Certified Python Developer",
+      "organization": "Python Institute",
+      "dateObtained": "2019-08-1",
+      "expirationDate": "2022-08-01",
+      "id": "7890",
+      "url": "https://pythoninstitute.org/certification"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Movie App",
+      "description": "A web application that allows users to search for and view information about movies.",
+      "url": "https://github.com/johndoe/movie-app",
+      "startDate": "2022-01-43",
+      "endDate": null
+    },
+    {
+      "name": "Personal Portfolio",
+      "description": "My personal website that showcases my skills and projects.",
+      "url": "https://johndoe.com",
+      "startDate": "2021-05-01",
+      "endDate": null
+    }
+  ]
+}

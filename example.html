@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+   <title>John Doe - Full-Stack Web Developer</title>
+   <style>
+      body {
+         font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+         font-size: 16px;
+         line-height: 1.5;
+         margin: 0;
+         padding: 0;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+         font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+         font-weight: 600;
+         margin: 0;
+         padding: 0;
+      }
+
+      .container {
+         max-width: 800px;
+         margin: 0 auto;
+         padding: 1rem;
+      }
+
+      .section {
+         margin-bottom: 2rem;
+      }
+
+      .section-header {
+         margin-bottom: 1rem;
+      }
+
+      .section-content {
+         margin-left: 1rem;
+      }
+
+      .list {
+         margin: 0;
+         padding: 0;
+         list-style: none;
+      }
+
+      .list-item {
+         margin-bottom: 0.5rem;
+      }
+
+      .list-item-title {
+         font-weight: 600;
+      }
+
+      .list-item-subtitle {
+         font-weight: 400;
+         font-style: italic;
+      }
+
+      .list-item-description {
+         margin-top: 0.25rem;
+      }
+
+      .list-item-link {
+         font-weight: 400;
+         color: #007bff;
+         text-decoration: none;
+      }
+
+      .list-item-link:hover {
+         text-decoration: underline;
+      }
+
+      .skill {
+         display: inline-block;
+         margin-right: 0.5rem;
+         margin-bottom: 0.5rem;
+         padding: 0.25rem 0.5rem;
+         font-weight: 600;
+         color: #fff;
+         background-color: #007bff;
+         border-radius: 0.25rem;
+      }
+
+      .skill-level {
+         margin-left: 0.5rem;
+         font-weight: 400;
+         color: #6c757d;
+      }
+
+      .about {
+         font-style: italic;
+      }
+
+      @media print {
+         * {
+            -webkit-print-color-adjust: exact !important;
+            color-adjust: exact !important;
+         }
+
+         .section {
+            margin-top: 1.5rem;
+            margin-bottom: 2rem;
+            page-break-inside: avoid;
+         }
+
+         .section-header {
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+         }
+
+         h3.section-header:first-child {
+            margin-top: 0;
+         }
+
+         p {
+            orphans: 3;
+            widows: 3;
+         }
+
+         footer {
+            display: none;
+         }
+      }
+   </style>
+</head>
+
+<body>
+   <div class="container">
+      <header>
+         <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/John_Doe%2C_born_John_Nommensen_Duchac.jpg/174px-John_Doe%2C_born_John_Nommensen_Duchac.jpg"
+            alt="Profile Picture">
+         <h1>John Doe</h1>
+         <h2>Full-Stack Web Developer</h2>
+      </header>
+      <section class="section">
+         <h3 class="section-header">Contact Information</h3>
+         <div class="section-content">
+            <ul class="list">
+               <li class="list-item">
+                  <span class="list-item-title">Email: </span>
+                  <span class="list-item-description">johndoe@example.com</span>
+               </li>
+               <li class="list-item">
+                  <span class="list-item-title">Phone: </span>
+                  <span class="list-item-description">+1-555-555-5555</span>
+               </li>
+               <li class="list-item">
+                  <span class="list-item-title">Address: </span>
+                  <span class="list-item-description">123 Main St, Anytown USA</span>
+               </li>
+               <li class="list-item">
+                  <span class="list-item-title">Websites: </span>
+                  <ul class="list-item">
+                     <li class="list-item">
+                        <span class="list-item-title">Personal: </span>
+                        <a href="https://johndoe.com" target="_blank" rel="noopener"
+                           class="list-item-link">https://johndoe.com</a>
+                     </li>
+                     <li class="list-item">
+                        <span class="list-item-title">Portfolio: </span>
+                        <a href="https://github.com/johndoe" target="_blank" rel="noopener"
+                           class="list-item-link">https://github.com/johndoe</a>
+                     </li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+      </section>
+      <section class="section">
+         <h3 class="section-header">Education</h3>
+         <div class="section-content">
+            <ul class="list">
+               <li class="list-item">
+                  <span class="list-item-title">Bachelor of Science, Computer Science</span>
+                  <span class="list-item-subtitle">University of Anytown, 2014-2018</span>
+                  <p class="list-item-description">Studied computer science and mathematics, with a focus on software
+                     development and algorithms. Dean's List, Honor Society. GPA: 3.9</p>
+               </li>
+               <li class="list-item">
+                  <span class="list-item-title">High School Diploma</span>
+                  <span class="list-item-subtitle">Anytown High School, 2010-2014</span>
+                  <p class="list-item-description">Completed a rigorous high school program with a focus on math and
+                     science. National Honor Society. GPA: 4.0</p>
+               </li>
+            </ul>
+         </div>
+      </section>
+      <section class="section">
+         <h3 class="section-header">Languages</h3>
+         <div class="section-content">
+            <ul class="list">
+               <li class="list-item">
+                  <span class="list-item-title">English: </span>
+                  <span class="list-item-description">Native</span>
+               </li>
+               <li class="list-item">
+                  <span class="list-item-title">Spanish: </span>
+                  <span class="list-item-description">Intermediate</span>
+               </li>
+            </ul>
+         </div>
+      </section>
+      <section class="section">
+         <h3 class="section-header">Skills</h3>
+         <div class="section-content">
+            <ul class="list">
+               <li class="list-item">
+                  <span class="list-item-title">JavaScript: </span>
+                  <span class="list-item-description">Expert</span>
+               </li>
+               <li class="list-item">
+                  <span class="list-item-title">React: </span>
+                  <span class="list-item-description">Advanced</span>
+               </li>
+               <li class="list-item">
+                  <span class="list-item-title">Node.js: </span>
+                  <span class="list-item-description">Advanced</span>
+               </li>
+               <li class="list-item">
+                  <span class="list-item-title">Python: </span>
+                  <span class="list-item-description">Intermediate</span>
+               </li>
+            </ul>
+         </div>
+      </section>
+      <section class="section">
+         <h3 class="section-header">Experience</h3>
+         <div class="section-content">
+            <ul class="list">
+               <li class="list-item">
+                  <span class="list-item-title">Full-Stack Web Developer at Acme Corporation</span>
+                  <span class="list-item-date">June 2018 - Present</span>
+                  <span class="list-item-description">Developed and maintained web applications using React, Node.js,
+                     and other technologies. Collaborated with cross-functional teams to design and implement new
+                     features and improve existing ones.</span>
+               </li>
+               <li class="list-item">
+                  <span class="list-item-title">Software Engineer Intern at Acme Corporation</span>
+                  <span class="list-item-date">June 2017 - August 2017</span>
+                  <span class="list-item-description">Assisted with the development of a new web application using React
+                     and Node.js. Worked with senior engineers to write code, debug issues, and deploy to
+                     production.</span>
+               </li>
+               <li class="list-item">
+                  <span class="list-item-title">Software Engineer at Beta Industries</span>
+                  <span class="list-item-date">January 2017 - May 2018</span>
+                  <span class="list-item-description">Developed and maintained web applications and back-end services
+                     using Python, Django, and other technologies. Worked with a team to design and implement new
+                     features and fix bugs.</span>
+               </li>
+            </ul>
+         </div>
+      </section>
+      <section class="section">
+         <h3 class="section-header">Skills</h3>
+         <div class="section-content">
+            <ul class="list">
+               <li class="list-item">
+                  <span class="list-item-title">JavaScript</span>
+                  <span class="list-item-description">Expert</span>
+               </li>
+               <li class="list-item">
+                  <span class="list-item-title">React</span>
+                  <span class="list-item-description">Advanced</span>
+               </li>
+               <li class="list-item">
+                  <span class="list-item-title">Node.js</span>
+                  <span class="list-item-description">Advanced</span>
+               </li>
+               <li class="list-item">
+                  <span class="list-item-title">Python</span>
+                  <span class="list-item-description">Intermediate</span>
+               </li>
+            </ul>
+         </div>
+      </section>
+      <section class="section">
+         <h3 class="section-header">Education</h3>
+         <div class="section-content">
+            <ul class="list">
+               <li class="list-item">
+                  <span class="list-item-title">Bachelor of Science in Computer Science, University of Anytown</span>
+                  <span class="list-item-date">September 2014 - May 2018</span>
+                  <span class="list-item-description">Studied computer science and mathematics, with a focus on software
+                     development and algorithms. Dean's List, Honor Society. GPA: 3.9</span>
+               </li>
+               <li class="list-item">
+                  <span class="list-item-title">High School Diploma, Anytown High School</span>
+                  <span class="list-item-date">September 2010 - May 2014</span>
+                  <span class="list-item-description">Completed a rigorous high school program with a focus on math and
+                     science. National Honor Society. GPA: 4.0</span>
+               </li>
+            </ul>
+         </div>
+      </section>
+      <section class="section">
+         <h3 class="section-header">Certifications</h3>
+         <div class="section-content">
+            <ul class="list">
+               <li class="list-item">
+                  <span class="list-item-title">Certified React Developer</span>
+                  <span class="list-item-date">January 2021</span>
+                  <span class="list-item-description">React Training</span>
+               </li>
+               <li class="list-item">
+                  <span class="list-item-title">Certified Python Developer</span>
+                  <span class="list-item-date">August 2019 - August 2022</span>
+                  <span class="list-item-description">Python Institute</span>
+               </li>
+            </ul>
+         </div>
+      </section>
+      <section class="section">
+         <h3 class="section-header">Projects</h3>
+         <div class="section-content">
+            <ul class="list">
+               <li class="list-item">
+                  <h4 class="list-item-title">Movie App</h4>
+                  <p class="list-item-description">A web application that allows users to search for and view
+                     information about movies.</p>
+                  <a href="https://github.com/johndoe/movie-app" target="_blank" rel="noopener"
+                     class="list-item-link">https://github.com/johndoe/movie-app</a>
+                  <p class="list-item-date">January 2022 - Present</p>
+               </li>
+               <li class="list-item">
+                  <h4 class="list-item-title">Personal Portfolio</h4>
+                  <p class="list-item-description">My personal website that showcases my skills and projects.</p>
+                  <a href="https://johndoe.com" target="_blank" rel="noopener"
+                     class="list-item-link">https://johndoe.com</a>
+                  <p class="list-item-date">May 2021 - Present</p>
+               </li>
+            </ul>
+         </div>
+      </section>
+      <footer>
+         <p class="footer-text">This page was created by John Doe. &copy; 2023</p>
+      </footer>
+</body>
+
+</html>

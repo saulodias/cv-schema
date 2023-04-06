@@ -1,0 +1,383 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CV Schema",
+  "description": "A standard CV format that addresses the requirements of most common applicant's information.",
+  "type": "object",
+  "properties": {
+    "languageCode": {
+      "type": "string",
+      "description": "The language used in the CV, identified by its four-letter code according to the IETF language tag specification. The code is composed of an ISO 639-1 or 639-2 language code, followed by an ISO 3166-1 alpha-2 country code, separated by a hyphen (e.g., en-US for English spoken in the United States, fr-CA for French spoken in Canada). Please refer to the IETF language tag specification for more information.",
+      "pattern": "^[a-z]{2}-[A-Z]{2}$",
+      "examples": [
+        "en-US",
+        "es-ES",
+        "fr-FR",
+        "de-DE",
+        "zh-CN",
+        "ja-JP",
+        "ko-KR",
+        "pt-BR",
+        "ru-RU",
+        "ar-SA"
+      ]
+    },
+    "imageLink": {
+      "type": "string",
+      "format": "uri",
+      "description": "A link to the applicant's profile picture."
+    },
+    "name": {
+      "type": "string",
+      "description": "The full name of the applicant."
+    },
+    "title": {
+      "type": "string",
+      "description": "A brief title describing the applicant's professional expertise."
+    },
+    "contact": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "The applicant's email address."
+        },
+        "websites": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": "string",
+                "format": "uri",
+                "description": "A URL to a website associated with the applicant."
+              },
+              "type": {
+                "type": "string",
+                "description": "The type of website (e.g., Blog, Personal, Portfolio, Professional Profile)."
+              }
+            },
+            "required": ["url", "type"]
+          },
+          "description": "A list of websites associated with the applicant."
+        },
+        "phone": {
+          "type": "string",
+          "description": "The applicant's phone number."
+        },
+        "address": {
+          "$ref": "#/definitions/address"
+        }
+      },
+      "description": "The applicant's contact information."
+    },
+    "education": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "institution": {
+            "type": "string",
+            "description": "The name of the educational institution."
+          },
+          "degree": {
+            "type": "string",
+            "description": "The degree obtained or the program pursued at the institution."
+          },
+          "fieldOfStudy": {
+            "type": "string",
+            "description": "The field of study for the educational program."
+          },
+          "startDate": {
+            "type": "string",
+            "format": "partial-date",
+            "description": "The start date of the educational program."
+          },
+          "endDate": {
+            "type": ["string", "null"],
+            "format": "partial-date",
+            "description": "This field can be null if the position is ongoing, and can also contain partial dates (e.g., '2012-04' for April 2012)."
+          },
+          "description": {
+            "type": "string",
+            "description": "A brief description of the program, including skills acquired."
+          },
+          "honors": {
+            "type": "string",
+            "description": "Honors, awards, or distinctions received during the educational program."
+          },
+          "score": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "The numeric value of the score."
+              },
+              "unit": {
+                "type": "string",
+                "description": "The unit of the score (e.g. GPA, percentile, etc.)."
+              }
+            }
+          }
+        },
+        "required": ["institution", "degree", "startDate"]
+      },
+      "description": "A list of the applicant's educational history."
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "language": {
+            "type": "string",
+            "description": "The name of the language."
+          },
+          "proficiency": {
+            "type": "string",
+            "description": "The level of proficiency in the language (e.g., Elementary, Limited Working, Professional, Native or Bilingual)."
+          }
+        },
+        "required": ["language", "proficiency"]
+      },
+      "description": "A list of languages spoken by the applicant and their proficiency levels."
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "skill": {
+            "type": "string",
+            "description": "The name of the skill."
+          },
+          "level": {
+            "type": "string",
+            "description": "The proficiency level of the skill (e.g., Beginner, Intermediate, Advanced, Expert)."
+          }
+        },
+        "required": ["skill"]
+      },
+      "description": "A list of the applicant's technical and professional skills."
+    },
+    "experience": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the employer."
+          },
+          "address": {
+            "$ref": "#/definitions/address",
+            "description": "The company's address."
+          },
+          "description": {
+            "type": "string",
+            "description": "A brief description of the employer, including industry and size."
+          },
+          "website": {
+            "type": "string",
+            "format": "uri",
+            "description": "A link to the employer's website."
+          },
+          "startDate": {
+            "type": "string",
+            "format": "partial-date",
+            "description": "The start date of employment."
+          },
+          "endDate": {
+            "type": ["string", "null"],
+            "format": "partial-date",
+            "description": "The end date of employment or null if still employed."
+          },
+          "duration": {
+            "type": "string",
+            "description": "The duration of the employment (e.g., 2 years 3 months)."
+          },
+          "positions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "description": "The title of the position held by the applicant."
+                },
+                "type": {
+                  "type": "string",
+                  "description": "The type of employment (e.g., Full-time, Part-time, Contract, Internship)."
+                },
+                "location": {
+                  "type": "string",
+                  "description": "The location of the position, including city and country."
+                },
+                "duration": {
+                  "type": "string",
+                  "description": "The duration of the position (e.g., 2 years 3 months)."
+                },
+                "startDate": {
+                  "type": "string",
+                  "format": "partial-date",
+                  "description": "The start date of the position."
+                },
+                "endDate": {
+                  "type": ["string", "null"],
+                  "format": "partial-date",
+                  "description": "The end date of the position or null if currently employed."
+                },
+                "description": {
+                  "type": "string",
+                  "description": "A description of the applicant's responsibilities and achievements in the position."
+                },
+                "locationType": {
+                  "type": "string",
+                  "description": "The work arrangement for the position (e.g., On-site, Remote, Hybrid)."
+                },
+                "skills": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "A list of skills and technologies used in the position."
+                }
+              },
+              "required": [
+                "title",
+                "type",
+                "location",
+                "startDate",
+                "description"
+              ]
+            },
+            "description": "A list of positions held by the applicant at the company."
+          }
+        },
+        "required": ["name", "positions"]
+      },
+      "description": "A list of the applicant's work experience."
+    },
+    "about": {
+      "type": "string",
+      "description": "A brief summary of the applicant's professional background and career goals."
+    },
+    "certifications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the certification."
+          },
+          "organization": {
+            "type": "string",
+            "description": "The organization that issued the certification."
+          },
+          "dateObtained": {
+            "type": "string",
+            "format": "partial-date",
+            "description": "The date the certification was obtained."
+          },
+          "expirationDate": {
+            "type": ["string", "null"],
+            "format": "partial-date",
+            "description": "The expiration date of the certification, if applicable."
+          },
+          "id": {
+            "type": "string",
+            "description": "The identification number or code for the certification, if applicable (e.g., License number, Certificate number)."
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "description": "A URL to verify the certification, if available."
+          }
+        },
+        "required": ["name", "organization", "dateObtained"]
+      },
+      "description": "A list of the applicant's certifications and licenses."
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the project."
+          },
+          "description": {
+            "type": "string",
+            "description": "A brief description of the project, including goals, technologies used, and outcomes."
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "description": "A URL to view the project, if available (e.g., GitHub repository, Portfolio page)."
+          },
+          "startDate": {
+            "type": "string",
+            "format": "partial-date",
+            "description": "The start date of the project."
+          },
+          "endDate": {
+            "type": ["string", "null"],
+            "format": "partial-date",
+            "description": "The end date of the project or null if the project is still in progress."
+          }
+        },
+        "required": ["name", "description", "startDate"]
+      },
+      "description": "A list of the applicant's personal or professional projects."
+    }
+  },
+  "additionalProperties": true,
+  "formats": {
+    "partial-date": {
+      "type": "string",
+      "description": "A partial date that can be in the format 'YYYY', 'YYYY-MM', or 'YYYY-MM-DD'.",
+      "pattern": "^(\\d{4})-((0\\d)|(1[0-2]))-(([0-2]\\d)|(3[0-1])|)$"
+    }
+  },
+  "definitions": {
+    "address": {
+      "type": "object",
+      "properties": {
+        "country": {
+          "type": "string",
+          "description": "The name of the country.",
+          "maxLength": 100
+        },
+        "stateProvince": {
+          "type": "string",
+          "description": "The name of the state or region.",
+          "maxLength": 100
+        },
+        "city": {
+          "type": "string",
+          "description": "The name of the city or town.",
+          "maxLength": 100
+        },
+        "postalCode": {
+          "type": "string",
+          "description": "The postal code or ZIP code of the address.",
+          "maxLength": 20
+        },
+        "addressLine1": {
+          "type": "string",
+          "description": "The first line of the street address.",
+          "maxLength": 100
+        },
+        "addressLine2": {
+          "type": "string",
+          "description": "The second line of the street address.",
+          "maxLength": 100
+        }
+      },
+      "required": ["country", "city"]
+    }
+  },
+  "required": ["name", "contact", "education", "skills", "experience", "about"]
+}
